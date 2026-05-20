@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skyper2</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f0f0f;
+    color:white;
+    overflow-x:hidden;
+}
+
+header{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2070') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+header h1{
+    font-size:80px;
+    color:#ff0000;
+    text-shadow:0 0 20px red;
+}
+
+header p{
+    font-size:24px;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+.buttons a{
+    text-decoration:none;
+    color:white;
+    background:red;
+    padding:15px 40px;
+    margin:10px;
+    border-radius:10px;
+    transition:0.3s;
+    display:inline-block;
+}
+
+.buttons a:hover{
+    transform:scale(1.1);
+    background:#ff3333;
+}
+
+section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.features{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    background:#1a1a1a;
+    width:300px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(255,0,0,0.3);
+}
+
+footer{
+    background:black;
+    padding:20px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>SKYPER2</h1>
+    <p>Yeni Nesil Metin2 PvP Server</p>
+
+    <div class="buttons">
+        <a href="#">KAYIT OL</a>
+        <a href="#">CLIENT İNDİR</a>
+    </div>
+</header>
+
+<section>
+    <h2>Özellikler</h2>
+
+    <div class="features">
+
+        <div class="card">
+            <h3>Emek PvP</h3>
+            <p>Dengeli ve eğlenceli sistem.</p>
+        </div>
+
+        <div class="card">
+            <h3>Boss Etkinlikleri</h3>
+            <p>Her gün aktif etkinlikler.</p>
+        </div>
+
+        <div class="card">
+            <h3>Lonca Savaşları</h3>
+            <p>Gerçek PvP deneyimi.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Skyper2 - Tüm Hakları Saklıdır
+</footer>
+
+</body>
+</html>
