@@ -17,146 +17,117 @@
 
 body{
     font-family:'Cinzel', serif;
-    background:#0b0b0b;
+    background:black;
     color:white;
     overflow-x:hidden;
 }
 
-/* HEADER */
-
-header{
+/* HERO */
+.hero{
     width:100%;
     height:100vh;
     background:
-    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-    url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2070');
+    linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)),
+    url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070');
     background-size:cover;
     background-position:center;
     display:flex;
-    justify-content:center;
     align-items:center;
-    text-align:center;
+    padding-left:80px;
     position:relative;
 }
 
-header::before{
-    content:'';
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:radial-gradient(circle, transparent 20%, black 100%);
-}
-
-.hero{
-    position:relative;
-    z-index:2;
+.hero-content{
+    max-width:600px;
 }
 
 .hero h1{
     font-size:90px;
-    color:#ff0000;
-    text-shadow:0 0 20px red;
-    animation: glow 2s infinite alternate;
+    color:red;
+    text-shadow:0 0 30px red;
 }
 
 .hero p{
+    font-size:22px;
     margin-top:20px;
-    font-size:25px;
     color:#ddd;
 }
 
-.buttons{
+/* BUTTONS */
+.btns{
     margin-top:40px;
 }
 
-.buttons a{
+.btn{
     display:inline-block;
-    margin:10px;
-    padding:18px 45px;
-    border-radius:12px;
+    padding:15px 35px;
+    margin-right:15px;
+    border-radius:10px;
     text-decoration:none;
-    font-size:18px;
     font-weight:bold;
     transition:0.3s;
 }
 
-.btn-register{
-    background:#ff0000;
+.btn-red{
+    background:red;
     color:white;
     box-shadow:0 0 20px red;
 }
 
-.btn-download{
-    background:#111;
+.btn-dark{
     border:2px solid red;
     color:white;
 }
 
-.buttons a:hover{
+.btn:hover{
     transform:scale(1.1);
 }
 
-/* FEATURES */
-
+/* SECTION */
 section{
     padding:100px 20px;
     text-align:center;
 }
 
-.section-title{
-    font-size:50px;
-    margin-bottom:60px;
-    color:#ff2a2a;
+.title{
+    font-size:45px;
+    color:red;
+    margin-bottom:50px;
 }
 
+/* FEATURES */
 .features{
     display:flex;
     justify-content:center;
+    gap:25px;
     flex-wrap:wrap;
-    gap:30px;
 }
 
 .card{
-    width:320px;
-    background:#141414;
-    padding:35px;
-    border-radius:20px;
+    width:300px;
+    background:#111;
+    padding:30px;
+    border-radius:15px;
     border:1px solid rgba(255,0,0,0.3);
-    transition:0.4s;
-    box-shadow:0 0 25px rgba(255,0,0,0.15);
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 30px rgba(255,0,0,0.4);
 }
 
 .card h3{
-    margin-bottom:20px;
-    font-size:28px;
-    color:#ff4444;
-}
-
-.card p{
-    color:#ccc;
-    line-height:1.6;
+    color:red;
+    margin-bottom:15px;
 }
 
 /* GALLERY */
-
 .gallery{
     display:flex;
-    flex-wrap:wrap;
     justify-content:center;
     gap:20px;
-    margin-top:40px;
+    flex-wrap:wrap;
 }
 
 .gallery img{
     width:350px;
-    border-radius:20px;
-    transition:0.4s;
-    box-shadow:0 0 20px rgba(255,0,0,0.2);
+    border-radius:15px;
+    transition:0.3s;
 }
 
 .gallery img:hover{
@@ -164,70 +135,57 @@ section{
 }
 
 /* FOOTER */
-
 footer{
-    background:black;
-    padding:35px;
     text-align:center;
+    padding:30px;
     border-top:1px solid rgba(255,0,0,0.2);
-}
-
-footer p{
-    color:#888;
-}
-
-/* ANIMATION */
-
-@keyframes glow{
-    from{
-        text-shadow:0 0 10px red;
-    }
-    to{
-        text-shadow:0 0 30px red, 0 0 60px darkred;
-    }
+    color:#777;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
-
 <div class="hero">
+
+<div class="hero-content">
 
 <h1>SKYPER2</h1>
 
-<p>Yeni Nesil Metin2 PvP Deneyimi</p>
+<p>Metin2 PvP | Yeni Nesil Savaş Deneyimi</p>
 
-<div class="buttons">
-<a href="#" class="btn-register">KAYIT OL</a>
-<a href="#" class="btn-download">CLIENT İNDİR</a>
+<div class="btns">
+
+<a href="#" class="btn btn-red">KAYIT OL</a>
+<a href="#" class="btn btn-dark">CLIENT İNDİR</a>
+
 </div>
 
 </div>
 
-</header>
+</div>
 
 <section>
 
-<h2 class="section-title">SUNUCU ÖZELLİKLERİ</h2>
+<div class="title">SUNUCU ÖZELLİKLERİ</div>
 
 <div class="features">
 
 <div class="card">
-<h3>⚔ Emek PvP</h3>
-<p>Dengeli item sistemi ve gerçek PvP savaşları.</p>
+<h3>⚔ PvP Sistemi</h3>
+<p>Dengeli ve rekabetçi savaş sistemi.</p>
 </div>
 
 <div class="card">
-<h3>🔥 Boss Etkinlikleri</h3>
-<p>Her gün aktif etkinlikler ve özel boss savaşları.</p>
+<h3>🔥 Bosslar</h3>
+<p>Günlük etkinlik ve boss savaşları.</p>
 </div>
 
 <div class="card">
-<h3>🏆 Lonca Sistemi</h3>
-<p>Gerçek lonca savaşları ve rekabetçi sistem.</p>
+<h3>🏆 Lonca Savaşları</h3>
+<p>Gerçek PvP rekabeti.</p>
 </div>
 
 </div>
@@ -236,24 +194,20 @@ footer p{
 
 <section>
 
-<h2 class="section-title">OYUNDAN GÖRÜNTÜLER</h2>
+<div class="title">OYUN GÖRSELLERİ</div>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070">
-
-<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=2070">
-
 <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2070">
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070">
+<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=2070">
 
 </div>
 
 </section>
 
 <footer>
-
-<p>© 2026 Skyper2 - Tüm Hakları Saklıdır</p>
-
+© 2026 Skyper2 - Tüm Hakları Saklıdır
 </footer>
 
 </body>
