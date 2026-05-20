@@ -3,212 +3,244 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skyper2 | Metin2 PvP</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+<title>Skyper2 Metin2 PvP</title>
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
-    font-family:'Cinzel', serif;
-    background:black;
-    color:white;
-    overflow-x:hidden;
+margin:0;
+font-family:Arial;
+background:#000;
+color:white;
+overflow-x:hidden;
 }
 
-/* HERO */
+/* HERO BACKGROUND SLIDER */
 .hero{
-    width:100%;
-    height:100vh;
-    background:
-    linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)),
-    url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    padding-left:80px;
-    position:relative;
+height:100vh;
+display:flex;
+align-items:center;
+padding:60px;
+background-size:cover;
+background-position:center;
+animation:bg 12s infinite;
 }
 
-.hero-content{
-    max-width:600px;
+@keyframes bg{
+0%{background-image:url('https://images.unsplash.com/photo-1542751371-adc38448a05e');}
+50%{background-image:url('https://images.unsplash.com/photo-1511512578047-dfb367046420');}
+100%{background-image:url('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8');}
 }
 
 .hero h1{
-    font-size:90px;
-    color:red;
-    text-shadow:0 0 30px red;
+font-size:80px;
+color:red;
+text-shadow:0 0 20px red;
 }
 
 .hero p{
-    font-size:22px;
-    margin-top:20px;
-    color:#ddd;
+font-size:22px;
+color:#ddd;
 }
 
 /* BUTTONS */
-.btns{
-    margin-top:40px;
-}
-
 .btn{
-    display:inline-block;
-    padding:15px 35px;
-    margin-right:15px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
+display:inline-block;
+padding:15px 30px;
+margin:10px;
+text-decoration:none;
+color:white;
+border-radius:10px;
+font-weight:bold;
 }
 
-.btn-red{
-    background:red;
-    color:white;
-    box-shadow:0 0 20px red;
-}
-
-.btn-dark{
-    border:2px solid red;
-    color:white;
-}
-
-.btn:hover{
-    transform:scale(1.1);
-}
-
-/* SECTION */
-section{
-    padding:100px 20px;
-    text-align:center;
-}
-
-.title{
-    font-size:45px;
-    color:red;
-    margin-bottom:50px;
-}
+.red{background:red;}
+.dark{border:2px solid red;}
 
 /* FEATURES */
-.features{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
 }
 
 .card{
-    width:300px;
-    background:#111;
-    padding:30px;
-    border-radius:15px;
-    border:1px solid rgba(255,0,0,0.3);
+width:280px;
+background:#111;
+padding:25px;
+border-radius:15px;
+border:1px solid red;
 }
 
-.card h3{
-    color:red;
-    margin-bottom:15px;
+/* ONLINE COUNTER */
+.online{
+font-size:30px;
+color:lime;
+margin-top:20px;
 }
 
-/* GALLERY */
-.gallery{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+/* DISCORD */
+.discord{
+padding:60px;
+text-align:center;
 }
 
-.gallery img{
-    width:350px;
-    border-radius:15px;
-    transition:0.3s;
+iframe{
+border-radius:15px;
 }
 
-.gallery img:hover{
-    transform:scale(1.05);
+/* REGISTER MODAL */
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
 }
 
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:30px;
-    border-top:1px solid rgba(255,0,0,0.2);
-    color:#777;
+.modal-content{
+background:#111;
+padding:30px;
+border-radius:15px;
+width:300px;
+text-align:center;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px 0;
+}
+
+/* ANIMATED EFFECT */
+.glow{
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px red;}
+to{text-shadow:0 0 30px red;}
 }
 
 </style>
-
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
 
-<div class="hero-content">
+<div>
+<h1 class="glow">SKYPER2</h1>
+<p>Metin2 PvP - Gerçek Savaş Deneyimi</p>
 
-<h1>SKYPER2</h1>
+<div class="online">Online Oyuncu: <span id="online">153</span></div>
 
-<p>Metin2 PvP | Yeni Nesil Savaş Deneyimi</p>
+<br>
 
-<div class="btns">
-
-<a href="#" class="btn btn-red">KAYIT OL</a>
-<a href="#" class="btn btn-dark">CLIENT İNDİR</a>
-
-</div>
+<a class="btn red" onclick="openReg()">KAYIT OL</a>
+<a class="btn dark" href="https://example.com/client.zip">CLIENT İNDİR</a>
 
 </div>
 
 </div>
 
-<section>
+<!-- FEATURES -->
+<div class="section">
+<h2>ÖZELLİKLER</h2>
 
-<div class="title">SUNUCU ÖZELLİKLERİ</div>
-
-<div class="features">
+<div class="cards">
 
 <div class="card">
-<h3>⚔ PvP Sistemi</h3>
-<p>Dengeli ve rekabetçi savaş sistemi.</p>
+<h3>⚔ PvP Sistem</h3>
+<p>Dengeli savaş sistemi</p>
 </div>
 
 <div class="card">
-<h3>🔥 Bosslar</h3>
-<p>Günlük etkinlik ve boss savaşları.</p>
+<h3>🔥 Boss</h3>
+<p>Günlük etkinlikler</p>
 </div>
 
 <div class="card">
-<h3>🏆 Lonca Savaşları</h3>
-<p>Gerçek PvP rekabeti.</p>
+<h3>🏆 Lonca</h3>
+<p>Gerçek PvP savaşları</p>
+</div>
+
+</div>
+</div>
+
+<!-- GALLERY -->
+<div class="section">
+<h2>GÖRSELLER</h2>
+
+<div class="cards">
+
+<img width="300" src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
+<img width="300" src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+<img width="300" src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8">
+
 </div>
 
 </div>
 
-</section>
+<!-- DISCORD -->
+<div class="discord">
+<h2>DISCORD</h2>
 
-<section>
-
-<div class="title">OYUN GÖRSELLERİ</div>
-
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2070">
-<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070">
-<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=2070">
+<iframe src="https://discord.com/widget?id=000000000000&theme=dark"
+width="350" height="500"></iframe>
 
 </div>
 
-</section>
+<!-- REGISTER MODAL -->
+<div class="modal" id="modal">
 
-<footer>
-© 2026 Skyper2 - Tüm Hakları Saklıdır
-</footer>
+<div class="modal-content">
+
+<h2>Kayıt Ol</h2>
+
+<input placeholder="Kullanıcı Adı">
+<input placeholder="Şifre">
+
+<br>
+
+<button class="btn red">KAYDOL</button>
+<br><br>
+
+<button class="btn dark" onclick="closeReg()">Kapat</button>
+
+</div>
+
+</div>
+
+<script>
+
+// FAKE ONLINE SYSTEM
+setInterval(()=>{
+document.getElementById("online").innerText =
+150 + Math.floor(Math.random()*50);
+},3000);
+
+// REGISTER
+function openReg(){
+document.getElementById("modal").style.display="flex";
+}
+
+function closeReg(){
+document.getElementById("modal").style.display="none";
+}
+
+</script>
 
 </body>
 </html>
